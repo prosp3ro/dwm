@@ -32,8 +32,7 @@ dist: clean
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp -f dwm ${DESTDIR}${PREFIX}/bin
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	install -Dm755 ./dwm ${DESTDIR}${PREFIX}/bin
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm
