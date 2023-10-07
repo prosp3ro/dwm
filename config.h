@@ -106,6 +106,8 @@ static const Key keys[] = {
 	{ MODKEY,		                XK_comma,	   shiftview,  { .i = -1 } },
 	{ MODKEY,			            XK_period,	   shiftview,  { .i = 1 } },
 	{ MODKEY,			            XK_BackSpace,	spawn,		   SHCMD("dmenusys") },
+	{ MODKEY|ShiftMask,			            XK_BackSpace,	spawn,		   SHCMD("rebuild dwm") },
+	{ MODKEY,			            XK_grave,	spawn,		   SHCMD("dunstctl close") },
 	{ MODKEY|ShiftMask,			    XK_b,	spawn,		   SHCMD("dmenubluetooth") },
 	{ 0,			                XK_Print,	spawn,		   SHCMD("dmenumaim") },
 	TAGKEYS(                        XK_1,                      0)
