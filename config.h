@@ -29,6 +29,16 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Nsxiv",     NULL,       NULL,       0,            1,           -1 },
+	{ "Blueman-manager",     NULL,       NULL,       0,            1,           -1 },
+	{ "Wpa_gui",     NULL,       NULL,       0,            1,           -1 },
+	{ "mpv",     NULL,       NULL,       0,            1,           -1 },
+	{ "stacer",     NULL,       NULL,       0,            1,           -1 },
+	{ "pop-up",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gpick",     NULL,       NULL,       0,            1,           -1 },
+	{ "pavucontrol",     NULL,       NULL,       0,            1,           -1 },
+	{ "Tor Browser",     NULL,       NULL,       0,            1,           -1 },
+	{ "chatterino",     NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
