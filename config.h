@@ -123,7 +123,7 @@ static const Key keys[] = {
     { MODKEY,			            XK_i,	         spawn,		     SHCMD("dmenunet") },
     { MODKEY|ShiftMask,		        XK_i,		     spawn,		     {.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
     { MODKEY,			            XK_r,	         spawn,		     SHCMD("remaps dmenu") },
-    { MODKEY,			            XK_Delet,	     spawn,		     SHCMD("dmenukill") },
+    { MODKEY,			            XK_Delete,	     spawn,		     SHCMD("dmenukill") },
     { MODKEY,			            XK_F1,	         spawn,		     SHCMD("dmenumount") },
     { MODKEY,			            XK_F2,	         spawn,		     SHCMD("dmenuumount") },
     { MODKEY,			            XK_F3,	         spawn,		     SHCMD("dmenudisplay") },
