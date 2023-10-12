@@ -25,9 +25,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Tor Browser",     NULL,       NULL,       0,            1,           -1 },
+	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Tor Browser",     NULL,       NULL,       0,            1,           1,           -1 },
+	{ "brave",     NULL,       NULL,       0,            1,           1,           -1 },
 	// { "Nsxiv",     NULL,       NULL,       0,            1,           -1 },
 	// { "Blueman-manager",     NULL,       NULL,       0,            1,           -1 },
 	// { "Wpa_gui",     NULL,       NULL,       0,            1,           -1 },
