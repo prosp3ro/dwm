@@ -86,6 +86,7 @@ static const char *termcmd[]  = { TERMINAL, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
+#include "selfrestart.c"
 #include "shiftview.c"
 
 static const Key keys[] = {
@@ -159,6 +160,7 @@ static const Key keys[] = {
     TAGKEYS(                        XK_7,                            6)
     TAGKEYS(                        XK_8,                            7)
     TAGKEYS(                        XK_9,                            8)
+    { MODKEY|ShiftMask,             XK_q,            self_restart,   {0} },
 };
 
 /* button definitions */
