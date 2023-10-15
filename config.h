@@ -11,9 +11,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]                = { "monospace:size=10", "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"  };
 static char *colors[][3] = {
-       /*               fg           bg           border   */
-       [SchemeNorm] = { "#bbbbbb", "#222222", "#000000" },
-       [SchemeSel]  = { "#eeeeee", "#005577", "#770000"  },
+        /*               fg         bg         border   */
+        [SchemeNorm] = { "#bbbbbb", "#222222", "#000000" },
+        [SchemeSel]  = { "#eeeeee", "#005577", "#770000"  },
+        [SchemeHid]  = { "#770000", "#222222", "#770000"  },
 };
 
 /* tagging */
@@ -63,8 +64,6 @@ static const Layout layouts[] = {
 #define STACKKEYS(MOD,ACTION) \
 	{ MOD, XK_j,     ACTION##stack, {.i = INC(+1) } }, \
 	{ MOD, XK_k,     ACTION##stack, {.i = INC(-1) } }, \
-	{ MOD, XK_Tab,     ACTION##stack, {.i = INC(+1) } }, \
-	{ MOD|ShiftMask, XK_Tab,     ACTION##stack, {.i = INC(-1) } }, \
 	// { MOD, XK_grave, ACTION##stack, {.i = PREVSEL } }, \
 	// { MOD, XK_q,     ACTION##stack, {.i = 0 } }, \
 	// { MOD, XK_a,     ACTION##stack, {.i = 1 } }, \
@@ -86,15 +85,24 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 static const Key keys[] = {
     /* modifier                     key              function        argument */
+    // STACKKEYS(MODKEY,                             focus)
+    STACKKEYS(MODKEY|ShiftMask,                      push)
+	{ MODKEY,                       XK_j,            focusstackvis,  {.i = +1 } },
+	{ MODKEY,                       XK_Tab,          focusstackvis,  {.i = +1 } },
+	{ MODKEY,                       XK_k,            focusstackvis,  {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,          focusstackvis,  {.i = -1 } },
+	// { MODKEY|ShiftMask,             XK_j,            focusstackhid,  {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_k,            focusstackhid,  {.i = -1 } },
+	// { MODKEY,                       XK_s,            show,           {0} },
+	// { MODKEY|ShiftMask,             XK_s,            showall,        {0} },
+	// { MODKEY,                       XK_h,            hide,           {0} },
+    { MODKEY,                       XK_h,            setmfact,       {.f = -0.05} },
+    { MODKEY,                       XK_l,            setmfact,       {.f = +0.05} },
     { MODKEY,                       XK_d,            spawn,          {.v = dmenucmd } },
     { MODKEY|ShiftMask,		        XK_d,	         spawn,		     SHCMD("keepmenu") },
     { MODKEY,                       XK_Return,       spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask,             XK_Return,       togglescratch,  {.v = scratchpadcmd } },
     { MODKEY,                       XK_b,            togglebar,      {0} },
-    STACKKEYS(MODKEY,                                focus)
-    STACKKEYS(MODKEY|ShiftMask,                      push)
-    { MODKEY,                       XK_h,            setmfact,       {.f = -0.05} },
-    { MODKEY,                       XK_l,            setmfact,       {.f = +0.05} },
     { MODKEY,                       XK_q,            killclient,     {0} },
     { MODKEY,                       XK_f,            togglefullscr,  {0} },
     { MODKEY,                       XK_space,        setlayout,      {0} },
@@ -155,6 +163,7 @@ static const Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
