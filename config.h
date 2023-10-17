@@ -1,6 +1,6 @@
 /* Constants */
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "alacritty"
+#define TERMCLASS "Alacritty"
 #define BROWSER "brave-browser-nightly"
 
 /* appearance */
