@@ -143,6 +143,7 @@ static const Key keys[] = {
     { MODKEY,			            XK_F2,	         spawn,		     SHCMD("dmenuumount") },
     { MODKEY,			            XK_F3,	         spawn,		     SHCMD("dmenudisplay") },
     { MODKEY,			            XK_F4,	         spawn,		     SHCMD("remaps dmenu") },
+    { MODKEY|ShiftMask,             XK_q,            self_restart,   {0} },
     // { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
     // { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
     // { MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
@@ -161,7 +162,6 @@ static const Key keys[] = {
     TAGKEYS(                        XK_7,                            6)
     TAGKEYS(                        XK_8,                            7)
     TAGKEYS(                        XK_9,                            8)
-    { MODKEY|ShiftMask,             XK_q,            self_restart,   {0} },
 };
 
 /* button definitions */
