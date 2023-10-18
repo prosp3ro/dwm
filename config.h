@@ -87,7 +87,6 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
 #include "selfrestart.c"
-#include "shiftview.c"
 
 static const Key keys[] = {
     /* modifier                     key              function        argument */
@@ -116,8 +115,6 @@ static const Key keys[] = {
     { MODKEY,		                XK_m,	         spawn,		     SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -10 $(pidof dwmblocks)") },
     { MODKEY,			            XK_minus,	     spawn,		     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -10 $(pidof dwmblocks)") },
     { MODKEY,			            XK_equal,	     spawn,		     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -10 $(pidof dwmblocks)") },
-    { MODKEY,		                XK_comma,	     shiftview,      { .i = -1 } },
-    { MODKEY,			            XK_period,	     shiftview,      { .i = 1 } },
     { MODKEY,			            XK_BackSpace,    spawn,	         SHCMD("dmenusys") },
     { MODKEY|ShiftMask,			    XK_BackSpace,    spawn,	         SHCMD("rebuild dwm") },
     { MODKEY,			            XK_grave,	     spawn,		     SHCMD("dunstctl close") },
