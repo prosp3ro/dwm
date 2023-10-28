@@ -1,6 +1,6 @@
 /* Constants */
-#define TERMINAL "alacritty"
-#define TERMCLASS "Alacritty"
+#define TERMINAL "st"
+#define TERMCLASS "St"
 #define BROWSER "brave-browser-nightly"
 
 /* appearance */
@@ -115,11 +115,11 @@ static const Key keys[] = {
     { MODKEY,		                XK_m,	         spawn,		     SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle; kill -10 $(pidof dwmblocks)") },
     { MODKEY,			            XK_minus,	     spawn,		     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -10 $(pidof dwmblocks)") },
     { MODKEY,			            XK_equal,	     spawn,		     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -10 $(pidof dwmblocks)") },
-    { MODKEY,			            XK_BackSpace,    spawn,	         SHCMD("dmenusys") },
+    { MODKEY,			            XK_BackSpace,    spawn,	         SHCMD("dm-sys") },
     { MODKEY|ShiftMask,			    XK_BackSpace,    spawn,	         SHCMD("rebuild dwm") },
     { MODKEY,			            XK_grave,	     spawn,		     SHCMD("dunstctl close") },
-    { MODKEY|ShiftMask,			    XK_b,	         spawn,		     SHCMD("dmenubluetooth") },
-    { 0,			                XK_Print,	     spawn,		     SHCMD("dmenumaim") },
+    { MODKEY|ShiftMask,			    XK_b,	         spawn,		     SHCMD("dm-bluetooth") },
+    { 0,			                XK_Print,	     spawn,		     SHCMD("dm-maim") },
 	{ MODKEY,			            XK_w,		     spawn,		     {.v = (const char*[]){ BROWSER, NULL } } },
     { MODKEY,			            XK_c,	         spawn,		     SHCMD("chromium") },
     { MODKEY|ShiftMask,			    XK_f,	         spawn,		     SHCMD("ferdium") },
@@ -131,15 +131,14 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,		        XK_equal,		 spawn,		     {.v = (const char*[]){ "mpc", "volume", "+5", NULL } } },
 	{ MODKEY,			            XK_bracketleft,	 spawn,		     {.v = (const char*[]){ "mpc", "prev", NULL } } },
 	{ MODKEY,		                XK_bracketright, spawn,		     {.v = (const char*[]){ "mpc", "next", NULL } } },
-    { MODKEY,			            XK_u,	         spawn,		     SHCMD("dmenubookmarks") },
-    { MODKEY,			            XK_i,	         spawn,		     SHCMD("dmenunet") },
+    { MODKEY,			            XK_u,	         spawn,		     SHCMD("urls") },
+    { MODKEY,			            XK_i,	         spawn,		     SHCMD("dm-net") },
     { MODKEY|ShiftMask,		        XK_i,		     spawn,		     {.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
     { MODKEY,			            XK_r,	         spawn,		     SHCMD("remaps dmenu") },
-    { MODKEY,			            XK_Delete,	     spawn,		     SHCMD("dmenukill") },
-    { MODKEY,			            XK_F1,	         spawn,		     SHCMD("dmenumount") },
-    { MODKEY,			            XK_F2,	         spawn,		     SHCMD("dmenuumount") },
-    { MODKEY,			            XK_F3,	         spawn,		     SHCMD("dmenudisplay") },
-    { MODKEY,			            XK_F4,	         spawn,		     SHCMD("remaps dmenu") },
+    { MODKEY,			            XK_Delete,	     spawn,		     SHCMD("dm-kill") },
+    { MODKEY,			            XK_F1,	         spawn,		     SHCMD("dm-mount") },
+    { MODKEY,			            XK_F2,	         spawn,		     SHCMD("dm-umount") },
+    { MODKEY,			            XK_F3,	         spawn,		     SHCMD("dm-display") },
     { MODKEY|ShiftMask,             XK_q,            self_restart,   {0} },
 	{ MODKEY,                       XK_period,  viewnext,       {0} },
 	{ MODKEY,                       XK_comma,   viewprev,       {0} },
