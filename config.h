@@ -14,7 +14,10 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]                = { "monospace:size=10", "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"  };
+static char *fonts[]                = { 
+    "Liberation Mono:size=11",
+    "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"
+};
 static char *colors[][3] = {
         /*               fg         bg         border   */
         [SchemeNorm] = { "#bbbbbb", "#222222", "#000000" },
