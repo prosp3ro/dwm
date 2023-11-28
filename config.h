@@ -139,6 +139,7 @@ static const Key keys[] = {
     { MODKEY,                            XK_bracketright,             spawn,                     {.v = (const char*[]){ "mpc", "volume", "+5", NULL } } },
     { MODKEY|ShiftMask,                  XK_bracketleft,	          spawn,                     {.v = (const char*[]){ "mpc", "prev", NULL } } },
     { MODKEY|ShiftMask,                  XK_bracketright,             spawn,                     {.v = (const char*[]){ "mpc", "next", NULL } } },
+    { MODKEY,                            XK_semicolon,                spawn,                     SHCMD("sysdatanotify") },
     { MODKEY,                            XK_u,                        spawn,                     SHCMD("urls") },
     { MODKEY,                            XK_i,                        spawn,                     SHCMD("dm-net") },
     { MODKEY|ShiftMask,                  XK_i,                        spawn,                     {.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
