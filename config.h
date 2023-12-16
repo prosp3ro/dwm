@@ -92,8 +92,6 @@ static const char *termcmd[]       = { TERMINAL, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
-#include "selfrestart.c"
-
 static const Key keys[] = {
     /* modifier                          key                          function                   argument */
     // STACKKEYS(MODKEY,                                              focus)
@@ -148,8 +146,6 @@ static const Key keys[] = {
     { MODKEY,                            XK_F1,                       spawn,                     SHCMD("dm-mount") },
     { MODKEY,                            XK_F2,                       spawn,                     SHCMD("dm-umount") },
     { MODKEY,                            XK_F3,                       spawn,                     SHCMD("dm-display") },
-    /* doesn't work */
-    // { MODKEY|ShiftMask,                  XK_q,                        self_restart,              {0} },
     { MODKEY,                            XK_period,                   viewnext,                  {0} },
     { MODKEY,                            XK_comma,                    viewprev,                  {0} },
     { MODKEY,                            XK_Tab,                      viewnext,                  {0} },
