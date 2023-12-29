@@ -127,6 +127,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                  XK_b,                        spawn,                     SHCMD("dm-bluetooth") },
     { 0,                                 XK_Print,                    spawn,                     SHCMD("dm-maim") },
     { MODKEY,                            XK_w,                        spawn,                     {.v = (const char*[]){ BROWSER, NULL } } },
+    { MODKEY|ShiftMask,                  XK_w,                        spawn,                     SHCMD("brave") },
     { MODKEY|ShiftMask,                  XK_f,                        spawn,                     SHCMD("ferdium") },
     { MODKEY,                            XK_s,                        spawn,                     SHCMD("sidekick-browser-stable") },
     { MODKEY|ShiftMask,                  XK_s,                        spawn,                     SHCMD("signal-desktop") },
