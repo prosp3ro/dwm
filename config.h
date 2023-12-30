@@ -151,7 +151,7 @@ static const Key keys[] = {
     { MODKEY,                            XK_comma,                    viewprev,                  {0} },
     { MODKEY,                            XK_Tab,                      viewnext,                  {0} },
     { MODKEY,                            XK_Escape,                   viewprev,                  {0} },
-    { MODKEY,                            XK_c,                        spawn,                     SHCMD("clclip") },
+    { MODKEY,                            XK_c,                        spawn,                     SHCMD("clear-clipboard") },
     { MODKEY|ShiftMask,                  XK_c,                        spawn,                     SHCMD("chromium") },
     { MODKEY|ShiftMask,                  XK_period,                   tagtonext,                 {0} },
     { MODKEY|ShiftMask,                  XK_comma,                    tagtoprev,                 {0} },
