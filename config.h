@@ -129,7 +129,7 @@ static const Key keys[] = {
     { MODKEY,                            XK_w,                        spawn,                     {.v = (const char*[]){ BROWSER, NULL } } },
     { MODKEY|ShiftMask,                  XK_w,                        spawn,                     SHCMD("brave") },
     { MODKEY|ShiftMask,                  XK_f,                        spawn,                     SHCMD("ferdium") },
-    { MODKEY,                            XK_s,                        spawn,                     SHCMD("sidekick-browser-stable") },
+    { MODKEY,                            XK_s,                        spawn,                     SHCMD("librewolf") },
     { MODKEY|ShiftMask,                  XK_s,                        spawn,                     SHCMD("signal-desktop") },
     { MODKEY,                            XK_n,                        spawn,                     SHCMD("obsidian") },
     { MODKEY,                            XK_p,                        spawn,                     {.v = (const char*[]){ "mpc", "toggle", NULL } } },
