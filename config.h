@@ -16,7 +16,7 @@ static const          int showbar                 = 1; /* 0 means no bar */
 static const          int topbar                  = 1; /* 0 means bottom bar */
 
 static char *fonts[] = { 
-    "Liberation Mono:size=11",
+    "Liberation Sans:size=11",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"
 };
 
@@ -133,7 +133,6 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                  XK_s,                        spawn,                     SHCMD("signal-desktop") },
     { MODKEY,                            XK_n,                        spawn,                     SHCMD("obsidian") },
     { MODKEY,                            XK_p,                        spawn,                     {.v = (const char*[]){ "mpc", "toggle", NULL } } },
-    { MODKEY|ShiftMask,                  XK_v,                        spawn,                     SHCMD("vscodium") },
     { MODKEY,                            XK_bracketleft,              spawn,                     {.v = (const char*[]){ "mpc", "volume", "-5", NULL } } },
     { MODKEY,                            XK_bracketright,             spawn,                     {.v = (const char*[]){ "mpc", "volume", "+5", NULL } } },
     { MODKEY|ShiftMask,                  XK_bracketleft,	          spawn,                     {.v = (const char*[]){ "mpc", "prev", NULL } } },
@@ -142,11 +141,12 @@ static const Key keys[] = {
     { MODKEY,                            XK_u,                        spawn,                     SHCMD("urls") },
     { MODKEY,                            XK_i,                        spawn,                     SHCMD("dm-net") },
     { MODKEY|ShiftMask,                  XK_i,                        spawn,                     {.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
-    { MODKEY,                            XK_r,                        spawn,                     SHCMD("remaps dmenu") },
+    { MODKEY,                            XK_r,                        spawn,                     SHCMD("remaps us") },
+    { MODKEY|ShiftMask,                  XK_r,                        spawn,                     SHCMD("remaps dmenu") },
     { MODKEY,                            XK_Delete,                   spawn,                     SHCMD("dm-kill") },
     { MODKEY,                            XK_F1,                       spawn,                     SHCMD("dm-mount") },
     { MODKEY,                            XK_F2,                       spawn,                     SHCMD("dm-umount") },
-    { MODKEY,                            XK_F3,                       spawn,                     SHCMD("dm-display") },
+    { MODKEY,                            XK_0,                        spawn,                     SHCMD("dm-display") },
     { MODKEY,                            XK_period,                   viewnext,                  {0} },
     { MODKEY,                            XK_comma,                    viewprev,                  {0} },
     { MODKEY,                            XK_Tab,                      viewnext,                  {0} },
@@ -155,6 +155,8 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                  XK_c,                        spawn,                     SHCMD("chromium") },
     { MODKEY|ShiftMask,                  XK_period,                   tagtonext,                 {0} },
     { MODKEY|ShiftMask,                  XK_comma,                    tagtoprev,                 {0} },
+    { MODKEY|ShiftMask,                  XK_Tab,                      tagtonext,                 {0} },
+    { MODKEY|ShiftMask,                  XK_Escape,                   tagtoprev,                 {0} },
     // { MODKEY,                            XK_i,                        incnmaster,                {.i = +1 } },
     // { MODKEY,                            XK_d,                        incnmaster,                {.i = -1 } },
     // { MODKEY|ShiftMask,                  XK_Return,                   zoom,                      {0} },
