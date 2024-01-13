@@ -122,7 +122,6 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                  XK_minus,                    spawn,                     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -5%; kill -10 $(pidof dwmblocks)") },
     { MODKEY|ShiftMask,                  XK_equal,                    spawn,                     SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +5%; kill -10 $(pidof dwmblocks)") },
     { MODKEY,                            XK_BackSpace,                spawn,                     SHCMD("dm-sys") },
-    { MODKEY|ShiftMask,                  XK_BackSpace,                spawn,                     SHCMD("rebuild dwm") },
     { MODKEY,                            XK_grave,                    spawn,                     SHCMD("dunstctl close") },
     { MODKEY|ShiftMask,                  XK_b,                        spawn,                     SHCMD("dm-bluetooth") },
     { 0,                                 XK_Print,                    spawn,                     SHCMD("dm-maim") },
