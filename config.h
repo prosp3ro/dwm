@@ -26,6 +26,7 @@ static char *colors[][3] = {
     [SchemeNorm] =    { "#bbbbbb",     "#222222",     "#000000" },
     [SchemeSel]  =    { "#eeeeee",     "#005577",     "#770000" },
     [SchemeHid]  =    { "#770000",     "#222222",     "#770000" },
+	// [SchemeUrg]  =    { "#000000",     "#000000",     "#000000" },
 };
 
 /* tagging */
@@ -38,9 +39,6 @@ static const Rule rules[] = {
      */
 
     /* class                 instance            title           tags mask        iscentered        isfloating          monitor */
-    // { "Signal",              NULL,               NULL,           ?,               0,                0,                  -1 },
-    // { "LibreWolf",           NULL,               NULL,           ?,               0,                0,                  -1 },
-    // { "Ferdium",             NULL,               NULL,           ?,               0,                0,                  -1 },
     { "Gimp",                NULL,               NULL,           0,               0,                1,                  -1 },
     { "Tor Browser",         NULL,               NULL,           0,               1,                1,                  -1 },
     { "brave",               NULL,               NULL,           0,               1,                1,                  -1 },
