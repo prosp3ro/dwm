@@ -38,6 +38,9 @@ static const Rule rules[] = {
      */
 
     /* class                 instance            title           tags mask        iscentered        isfloating          monitor */
+    // { "Signal",              NULL,               NULL,           ?,               0,                0,                  -1 },
+    // { "LibreWolf",           NULL,               NULL,           ?,               0,                0,                  -1 },
+    // { "Ferdium",             NULL,               NULL,           ?,               0,                0,                  -1 },
     { "Gimp",                NULL,               NULL,           0,               0,                1,                  -1 },
     { "Tor Browser",         NULL,               NULL,           0,               1,                1,                  -1 },
     { "brave",               NULL,               NULL,           0,               1,                1,                  -1 },
@@ -148,8 +151,8 @@ static const Key keys[] = {
     // { MODKEY,                            XK_i,                        spawn,                     SHCMD("dm-net") },
     { MODKEY,                            XK_i,                        spawn,                     SHCMD("dm-nm") },
     { MODKEY|ShiftMask,                  XK_i,                        spawn,                     {.v = (const char*[]){ TERMINAL, "-e", "sudo", "nmtui", NULL } } },
-    { MODKEY,                            XK_r,                        spawn,                     SHCMD("remaps us") },
-    { MODKEY|ShiftMask,                  XK_r,                        spawn,                     SHCMD("remaps dmenu") },
+    { MODKEY,                            XK_r,                        spawn,                     SHCMD("remaps us; kill -10 $(pidof dwmblocks)") },
+    { MODKEY|ShiftMask,                  XK_r,                        spawn,                     SHCMD("remaps pl; kill -10 $(pidof dwmblocks)") },
     { MODKEY,                            XK_0,                        spawn,                     SHCMD("dm-display") },
     { MODKEY,                            XK_period,                   viewnext,                  {0} },
     { MODKEY,                            XK_comma,                    viewprev,                  {0} },
