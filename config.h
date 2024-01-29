@@ -26,7 +26,6 @@ static char *colors[][3] = {
     [SchemeNorm] =    { "#bbbbbb",     "#222222",     "#000000" },
     [SchemeSel]  =    { "#eeeeee",     "#005577",     "#770000" },
     [SchemeHid]  =    { "#770000",     "#222222",     "#770000" },
-	// [SchemeUrg]  =    { "#000000",     "#000000",     "#000000" },
 };
 
 /* tagging */
