@@ -132,6 +132,7 @@ static const Key keys[] = {
     { MODKEY,                            XK_s,                        spawn,                     SHCMD("librewolf") },
     { MODKEY|ShiftMask,                  XK_s,                        spawn,                     SHCMD("signal-desktop") },
     { MODKEY,                            XK_n,                        spawn,                     SHCMD("obsidian") },
+    { MODKEY,                            XK_y,                        spawn,                     SHCMD("yt-music") },
     { MODKEY,                            XK_p,                        spawn,                     {.v = (const char*[]){ "mpc", "toggle", NULL } } },
     { MODKEY,                            XK_bracketleft,              spawn,                     {.v = (const char*[]){ "mpc", "volume", "-5", NULL } } },
     { MODKEY,                            XK_bracketright,             spawn,                     {.v = (const char*[]){ "mpc", "volume", "+5", NULL } } },
