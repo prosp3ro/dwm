@@ -180,6 +180,15 @@ static const Key keys[] = {
     TAGKEYS(                             XK_7,                                                   6)
     TAGKEYS(                             XK_8,                                                   7)
     TAGKEYS(                             XK_9,                                                   8)
+    TAGKEYS(                             XK_KP_End,                                                0)
+    TAGKEYS(                             XK_KP_Down,                                                1)
+    TAGKEYS(                             XK_KP_Next,                                                2)
+    TAGKEYS(                             XK_KP_Left,                                                3)
+    TAGKEYS(                             XK_KP_Begin,                                                4)
+    TAGKEYS(                             XK_KP_Right,                                                5)
+    TAGKEYS(                             XK_KP_Home,                                                6)
+    TAGKEYS(                             XK_KP_Up,                                                7)
+    TAGKEYS(                             XK_KP_Prior,                                                8)
 };
 
 /* button definitions */
