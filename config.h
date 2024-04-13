@@ -49,6 +49,9 @@ static const Rule rules[] = {
     { "pop-up",              NULL,               NULL,           0,               1,                1,                  -1 },
     { "Gpick",               NULL,               NULL,           0,               1,                1,                  -1 },
     { "pavucontrol",         NULL,               NULL,           0,               1,                1,                  -1 },
+    { "YouTube Music",       NULL,               NULL,           1 << 6,          1,                0,                  -1 },
+    { "obsidian",            NULL,               NULL,           1 << 8,          1,                0,                  -1 },
+    { "LibreWolf",           NULL,               NULL,           1 << 7,          1,                0,                  -1 },
     { "chatterino",          "chatterino",       NULL,           0,               1,                1,                  -1 },
 };
 
