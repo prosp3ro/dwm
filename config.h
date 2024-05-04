@@ -17,7 +17,8 @@ static const          int topbar                  = 1; /* 0 means bottom bar */
 
 static char *fonts[] = { 
     // "Liberation Sans:size=11",
-    "JetBrains Mono:size=10",
+    "monospace:size=10",
+    // "JetBrains Mono:size=10",
     "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"
 };
 
@@ -105,8 +106,8 @@ static const Key keys[] = {
     // STACKKEYS(MODKEY,                                              focus)
     STACKKEYS(MODKEY|ShiftMask,                                       push)
     { MODKEY,                            XK_j,                        focusstackvis,             {.i = +1 } },
-    // { MODKEY,                            XK_Tab,                      focusstackvis,             {.i = +1 } },
     { MODKEY,                            XK_k,                        focusstackvis,             {.i = -1 } },
+    // { MODKEY,                            XK_Tab,                      focusstackvis,             {.i = +1 } },
     // { MODKEY|ShiftMask,                  XK_Tab,                      focusstackvis,             {.i = -1 } },
     // { MODKEY|ShiftMask,                  XK_j,                        focusstackhid,             {.i = +1 } },
     // { MODKEY|ShiftMask,                  XK_k,                        focusstackhid,             {.i = -1 } },
